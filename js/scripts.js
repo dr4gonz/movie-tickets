@@ -37,6 +37,7 @@ movieDict["Me Before You"] = new Movie("Me Before You", 2016);
 movieDict["The Jungle Book"] = new Movie("The Jungle Book", 2016);
 movieDict["Neighbors 2 Sorority Rising"] = new Movie("Neighbors 2 Sorority Rising", 2016);
 movieDict["The Nice Guys"] = new Movie("The Nice Guys", 2016);
+movieDict["Warcraft"] = new Movie("Warcraft", 2016);
 movieDict["The Rocky Horror Picture Show"] = new Movie("The Rocky Horror Picture Show", 1975);
 movieDict["Meaning of Life"] = new Movie("Meaning of Life", 1983);
 
