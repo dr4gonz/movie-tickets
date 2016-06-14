@@ -31,19 +31,27 @@ movieDict = {};
 
 movieDict["Jurassic Park"] = new Movie("Jurassic Park", 1993);
 movieDict["X-Men Apocalypse"] = new Movie("X-Men Apocalypse", 2016);
-movieDict["Jurassic Park1"] = new Movie("Jurassic Park", 1993);
-movieDict["X-Men Apocalypse1"] = new Movie("X-Men Apocalypse", 2016);
-movieDict["Jurassic Park2"] = new Movie("Jurassic Park", 1993);
-movieDict["X-Men Apocalypse2"] = new Movie("X-Men Apocalypse", 2016);
-movieDict["Jurassic Park3"] = new Movie("Jurassic Park", 1993);
-movieDict["X-Men Apocalypse3"] = new Movie("X-Men Apocalypse", 2016);
+movieDict["The Angry Birds Movie"] = new Movie("The Angry Birds Movie", 2016);
+movieDict["Captain America Civil War"] = new Movie("Captain America Civil War", 2016);
+movieDict["Me Before You"] = new Movie("Me Before You", 2016);
+movieDict["The Jungle Book"] = new Movie("The Jungle Book", 2016);
+movieDict["Neighbors 2 Sorority Rising"] = new Movie("Neighbors 2 Sorority Rising", 2016);
+movieDict["The Nice Guys"] = new Movie("The Nice Guys", 2016);
+movieDict["The Rocky Horror Picture Show"] = new Movie("The Rocky Horror Picture Show", 1975);
+movieDict["Meaning of Life"] = new Movie("Meaning of Life", 1983);
 
 var inputMovie = "";
+var clearFields = function() {
+  $("#input-time").val("");
+  $("#input-number").val(1);
+  $("#select-age").val("Select Your Age");
+}
 $(document).ready(function(){
   Object.keys(movieDict).forEach(function(key) {
     $("#movie-selector").append("<img class='thumb' src='img/"+movieDict[key].name+".jpg'>");
   });
   $(".thumb").click(function() {
+    clearFields();
     $("#movie-poster").empty();
     $("#movie-poster").append("<img class='poster' src='"+$(this).attr("src")+"'>");
     var titleURL = $(this).attr("src");
@@ -70,7 +78,8 @@ $(document).ready(function(){
     var inputNumber = $("#input-number").val();
 
     var newTicket = new Ticket(inputMovie, inputTime, inputAge);
+    $(".total-text").show();
+    $("#total").text((newTicket.getPrice() * inputNumber).toFixed(2).toString());
 
-    $("#total").text((newTicket.getPrice() * inputNumber).toString());
   });
 });

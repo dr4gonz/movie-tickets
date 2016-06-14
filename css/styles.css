@@ -1,9 +1,74 @@
+body {
+  background-color: gray;
+}
+
+.page-header {
+  margin-top: -50px;
+  border-color: #333333;
+  border-width: 2px;
+}
+
+.col-md-4 {
+  background-color: white;
+  height: 500px;
+}
+
 .thumb {
   max-height: 200px;
   margin: 10px;
 }
+
 #movie-selector {
   overflow-x: scroll;
   max-height: 250px;
   white-space: nowrap;
+  margin-bottom: 70px;
+  background-color: white;
+}
+
+.poster {
+  height: 450px;
+  padding-top: 25px;
+}
+
+
+#input-number {
+  width: 70px;
+  display: inline;
+}
+
+#select-age, #input-time, #ticket-buttons {
+  margin-bottom: 15px;
+  width: 150px;
+}
+
+#ticket-control {
+  padding: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#movie-poster {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.total-text {
+  display: none;
+  font-size: 2em;
+  margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+  #movie-poster {
+    border-radius: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  #ticket-control {
+    border-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 386;
+  }
 }
