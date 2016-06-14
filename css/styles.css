@@ -1,0 +1,9 @@
+.thumb {
+  max-height: 200px;
+  margin: 10px;
+}
+#movie-selector {
+  overflow-x: scroll;
+  max-height: 250px;
+  white-space: nowrap;
+}
